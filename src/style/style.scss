@@ -1,0 +1,94 @@
+@import 'var.scss';
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-size: 16px;
+}
+
+main {
+    // height: 100vh;
+    background-color: $backgroundColor;
+    padding: 2rem;
+    section {
+        margin: 2rem 0;
+        article {
+            width: 24.375rem;
+            height: 24.375rem;
+            background-size: cover;
+            background-position: center;
+        }
+        .articleText::before {
+            width: 100%;
+            height: 100%;
+            content: '';
+            position: absolute;
+            background-color: rgba(black, 0.7);
+        }
+        .articleText {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            z-index: 999999;
+            & span:nth-child(2) {
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.container {
+    width: 1170px;
+    margin: auto;
+}
+
+nav {
+    height: 8.5rem;
+    display: flex;
+    align-items: center;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+    .logo img {
+        height: 2rem;
+        width: 5.125rem;
+    }
+    .menuBar {
+        height: 2px;
+        width: 20px;
+        background-color: $figureColor;
+        margin: 4px 0;
+    }
+}
+
+.cubeIcon {
+    display: flex;
+    flex-wrap: wrap;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    .cubeIconPart {
+        background-color: $figureColor;
+        width: 6px;
+        height: 6px;
+        margin: 2px;
+    }
+}
+
+footer {
+    background-color: $footerColor;
+    color: $iconColor;
+    padding: 2rem;
+    .icons li {
+        margin: 0.5rem;
+    }
+}
